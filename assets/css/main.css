@@ -4270,35 +4270,35 @@ input, select, textarea {
 		}
 
 		/* Skills Section Styles */
-		#skills .skills-grid {
+		#skills .skills-grid, #learning .skills-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			gap: 2rem;
 			margin-top: 2rem;
 		}
 
-		#skills .skills-category {
+		#skills .skills-category, #learning .skills-category {
 			background: #f1f1f1;
 			padding: 1.5rem;
 			border-radius: 8px;
 			transition: background-color 0.3s;
 		}
 
-		#skills .skills-category:hover {
+		#skills .skills-category:hover, #learning .skills-category:hover {
 			background: #e0e0e0;
 		}
 
-		#skills .skills-category h3 {
+		#skills .skills-category h3, #learning .skills-category h3 {
 			color: #18bfef;
 			margin-top: 0;
 			margin-bottom: 1rem;
 		}
 
-		#skills .skills-category ul {
+		#skills .skills-category ul, #learning .skills-category ul {
 			padding-left: 1.2rem;
 		}
 
-		#skills .skills-category li {
+		#skills .skills-category li, #learning .skills-category li {
 			margin-bottom: 0.5rem;
 		}
 
@@ -4376,7 +4376,7 @@ input, select, textarea {
 				font-size: 1rem;
 			}
 			
-			#skills .skills-grid {
+			#skills .skills-grid, #learning .skills-grid {
 				grid-template-columns: 1fr;
 			}
 			
@@ -4527,12 +4527,12 @@ input, select, textarea {
 
 /* Skills grid: 3 columns on desktop, 2 on tablet (1 on phones is set above) */
 @media screen and (min-width: 981px) {
-    #skills .skills-grid {
+    #skills .skills-grid, #learning .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 @media screen and (min-width: 737px) and (max-width: 980px) {
-    #skills .skills-grid {
+    #skills .skills-grid, #learning .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
