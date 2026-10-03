@@ -4444,3 +4444,107 @@ input, select, textarea {
     color: #666;
     font-size: 0.95em;
 }
+
+/* ==========================================================================
+   Portfolio polish: experience list, project cards, skills grid, a11y
+   ========================================================================== */
+
+/* Experience list: left-aligned text, readable dates, role notes */
+.training-item > div {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+.training-item img {
+    flex-shrink: 0;
+}
+.training-item small {
+    display: block;
+    margin-top: 0.25rem;
+}
+.training-item.has-notes {
+    align-items: flex-start;
+}
+.training-item.has-notes img {
+    margin-top: 0.25rem;
+}
+#about .training-item .role-notes {
+    list-style: disc;
+    margin: 0.75rem 0 0;
+    padding-left: 1.2rem;
+    text-align: left;
+}
+#about .training-item .role-notes li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.35rem;
+    color: #444;
+}
+
+/* Project cards: equal image shape, buttons aligned at the bottom */
+#main > .posts > article {
+    display: flex;
+    flex-direction: column;
+}
+#main > .posts > article > p:not(.project-meta) {
+    flex-grow: 1;
+}
+#projects > article .image.fit img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 6px;
+}
+#projects > article .image.fit.contain img {
+    object-fit: contain;
+    background: var(--img-bg, #ffffff);
+}
+#projects .project-meta {
+    margin: 1.5rem 0 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8a8f98;
+}
+#projects .project-meta i {
+    margin-right: 0.5rem;
+    color: #18bfef;
+}
+
+/* A lone last card spans the full row instead of leaving a gap */
+@media screen and (min-width: 737px) {
+    #main > .posts > article:last-child:nth-child(odd) {
+        width: 100%;
+    }
+    #main > .posts > article:last-child:nth-child(odd) .image.fit {
+        max-width: 34rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Skills grid: 3 columns on desktop, 2 on tablet (1 on phones is set above) */
+@media screen and (min-width: 981px) {
+    #skills .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 737px) and (max-width: 980px) {
+    #skills .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Accessibility */
+a:focus-visible,
+.button:focus-visible {
+    outline: 2px solid #18bfef;
+    outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

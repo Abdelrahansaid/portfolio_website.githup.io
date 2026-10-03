@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-labelledby="t d">
+  <title id="t">Hub and spoke SharePoint structure</title>
+  <desc id="d">A central hub connected to six department sites, with Teams as the front door and SharePoint as the storage layer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14202c"/>
+      <stop offset="1" stop-color="#1f3a4f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#18bfef" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#18bfef" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <circle cx="640" cy="360" r="300" fill="url(#glow)"/>
+
+  <!-- spokes -->
+  <g stroke="#18bfef" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="640" y1="360" x2="640" y2="168"/>
+    <line x1="640" y1="360" x2="940" y2="250"/>
+    <line x1="640" y1="360" x2="940" y2="470"/>
+    <line x1="640" y1="360" x2="640" y2="552"/>
+    <line x1="640" y1="360" x2="340" y2="470"/>
+    <line x1="640" y1="360" x2="340" y2="250"/>
+  </g>
+
+  <!-- department sites -->
+  <g fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2">
+    <rect x="540" y="104" width="200" height="84" rx="14"/>
+    <rect x="840" y="208" width="200" height="84" rx="14"/>
+    <rect x="840" y="428" width="200" height="84" rx="14"/>
+    <rect x="540" y="532" width="200" height="84" rx="14"/>
+    <rect x="240" y="428" width="200" height="84" rx="14"/>
+    <rect x="240" y="208" width="200" height="84" rx="14"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.55">
+    <rect x="566" y="128" width="64" height="10" rx="5"/><rect x="566" y="152" width="140" height="8" rx="4" fill-opacity="0.28"/>
+    <rect x="866" y="232" width="64" height="10" rx="5"/><rect x="866" y="256" width="140" height="8" rx="4" fill-opacity="0.28"/>
+    <rect x="866" y="452" width="64" height="10" rx="5"/><rect x="866" y="476" width="140" height="8" rx="4" fill-opacity="0.28"/>
+    <rect x="566" y="556" width="64" height="10" rx="5"/><rect x="566" y="580" width="140" height="8" rx="4" fill-opacity="0.28"/>
+    <rect x="266" y="452" width="64" height="10" rx="5"/><rect x="266" y="476" width="140" height="8" rx="4" fill-opacity="0.28"/>
+    <rect x="266" y="232" width="64" height="10" rx="5"/><rect x="266" y="256" width="140" height="8" rx="4" fill-opacity="0.28"/>
+  </g>
+
+  <!-- central hub -->
+  <circle cx="640" cy="360" r="92" fill="#18bfef"/>
+  <circle cx="640" cy="360" r="92" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="3"/>
+  <text x="640" y="352" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#0d1b26">Corporate</text>
+  <text x="640" y="392" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#0d1b26">Hub</text>
+
+  <!-- layers -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" text-anchor="middle">
+    <rect x="300" y="672" width="320" height="64" rx="32" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2"/>
+    <text x="460" y="713" fill="#ffffff">Teams · front door</text>
+    <rect x="660" y="672" width="320" height="64" rx="32" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2"/>
+    <text x="820" y="713" fill="#ffffff">SharePoint · storage</text>
+  </g>
+</svg>
