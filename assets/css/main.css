@@ -4548,3 +4548,19 @@ a:focus-visible,
         scroll-behavior: auto;
     }
 }
+
+/* Portfolio polish 2: tech tags, card hover, link states */
+.tech-tags { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; margin: 1.25rem 0 0; padding: 0; }
+.tech-tags li { margin: 0; padding: .2rem .7rem; border-radius: 999px; background: rgba(24,191,239,.1); border: 1px solid rgba(24,191,239,.35); color: #0e86a8; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.6; }
+#projects > article { transition: background-color .25s ease; }
+#projects > article .image.fit img { transition: transform .35s ease, box-shadow .35s ease; }
+@media (hover: hover) {
+  #projects > article:hover .image.fit img { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #projects > article .image.fit img { transition: none; }
+  #projects > article:hover .image.fit img { transform: none; }
+}
+.tech-tags + ul.actions { margin-top: 1.5rem; }
+#footer #copyright, #footer #copyright li, #footer #copyright a { color: #7b828c; }
+#footer #copyright a:hover { color: #18bfef; }
